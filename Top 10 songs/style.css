@@ -1,0 +1,48 @@
+* {
+    background-color: #532a7f;
+    padding: 0;
+    margin: 0;
+
+}
+
+div {
+    text-align: center;
+    margin: 200px;
+    padding: 5px;
+    font-family: Archivo;
+    color: aliceblue;
+}
+
+.button {
+    border: none;
+    background-color: #EFEFEF;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+.top table {
+
+    width: 100%;
+
+    border: 1px solid;
+
+}
+
+.top td {
+    padding: 15px;
+    text-align: left;
+    counter-reset: initial;
+
+}
+
+span {
+    background-color: palevioletred;
+    padding: 5px;
+    margin: 5px;
+}
+button{
+    position: relative;
+    cursor: pointer;
+}

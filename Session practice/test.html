@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form</title>
+  <style>
+    .container {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form action="submit_registration.php" method="post">
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" placeholder="Firstname" name="first_name" required>
+
+      <label for="last_name">Last Name:</label>
+      <input type="text" id="last_name" name="last_name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mobile">Mobile:</label>
+      <input type="tel" id="mobile" name="mobile" required>
+
+      <label for="date_of_birth">Date of Birth:</label>
+      <input type="date" id="date_of_birth" name="date_of_birth" required>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" required>
+      <label for="other">Other</label>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="area_pin">Area Pin:</label>
+      <input type="text" id="area_pin" name="area_pin" required>
+
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required>
+
+      <label for="qualification">Qualification:</label>
+      <select id="qualification" name="qualification" required>
+        <option value="high_school">High School</option>
+        <option value="diploma">Diploma</option>
+        <option value="undergraduate">Undergraduate</option>
+        <option value="graduate">Graduate</option>
+      </select>
+
+      <label>Specialization:</label>
+      <input type="checkbox" id="cs" name="specialization" value="cs">
+      <label for="cs">Computer Science</label>
+      <input type="checkbox" id="it" name="specialization" value="it">
+      <label for="it">Information Technology</label>
+      <input type="checkbox" id="computer_architecture" name="specialization" value="computer_architecture">
+      <label for="computer_architecture">Computer Architecture</label>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <input type="submit" value="Submit">
