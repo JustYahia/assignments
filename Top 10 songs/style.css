@@ -21,6 +21,9 @@ div {
     border-radius: 5px;
 
 }
+.top {
+    display: none;
+}
 
 .top table {
 
