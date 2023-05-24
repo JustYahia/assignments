@@ -1,0 +1,372 @@
+:root {
+    --page-padding: 30px;
+    --page-padding-md: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(./Fonts/Roboto-Regular.ttf);
+}
+
+body {
+    color: #6c757d;
+    font-family: "Roboto", "sans-serif";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#top-nav {
+    display: flex;
+    background-color: #f5f5f5;
+    height: 40px;
+
+}
+
+header>#top-nav ::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+header>#top-nav .links,
+header>#top-nav .menus {
+    float: left;
+    width: 50%;
+}
+
+
+
+header>#top-nav .menus .menu {
+    float: right;
+}
+
+header>#top-nav .menus .counters {
+    display: none;
+    float: left;
+}
+
+#top-nav .links ul {
+    list-style: none;
+    text-decoration: none;
+
+}
+
+ul li {
+    float: left;
+    padding: 10px 50px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #6c757d;
+
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #6c757d;
+
+}
+
+.menus .menu {
+    float: right;
+    margin: 5px;
+}
+
+.menus>.menu ul {
+    list-style: none;
+    display: none;
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    top: 100%;
+    min-width: 100%;
+
+    background-color: white;
+
+
+}
+
+.menus>.menu label {
+    line-height: 1rem;
+    color: #212529;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    display: block;
+    margin: 2px 0 2px 5px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+
+
+}
+
+.menus>.menu ul li {
+    padding: 10px;
+
+}
+
+.menus>.menu label:hover>ul {
+    display: block;
+    top: 100%;
+    min-width: 100%;
+    right: 0;
+    background-color: white;
+}
+
+.menus>.menu label ::after {
+    display: inline-block;
+
+}
+
+@media screen and (max-width :900px) {
+    header>#top-nav {
+        background-color: #f5f5f5;
+        padding: 0 var(--page-padding-md)
+    }
+}
+
+@media screen and (max-width : 600px) {
+    header>#top-nav {
+        background-color: #f5f5f5;
+        padding: 0;
+    }
+
+    header>#top-nav .links {
+        display: none;
+        float: left;
+    }
+
+    header>#top-nav .menus {
+        width: 100%;
+        text-align: center;
+    }
+
+    header>#top-nav .menus .counters {
+        display: block;
+    }
+
+}
+
+#logo-section {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.logo {
+    margin-left: 50px;
+    height: 60px;
+
+}
+
+.multi {
+    padding: 0 5px;
+    position: relative;
+    margin-right: 0;
+    height: inherit;
+    font-size: 40px;
+    background-color: #3d464d;
+    color: #fcd240;
+}
+
+.shop {
+    padding: 0 5px;
+    position: absolute;
+    margin-left: 0;
+    font-size: 40px;
+    background-color: #fcd240;
+    color: #3d464d;
+}
+
+.search-bar {
+    height: 50px;
+    width: auto;
+    align-content: center;
+}
+
+.search-input {
+    position: relative;
+    width: 500px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 10px;
+
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    border: solid 1px #ccc;
+    border-radius: 4px;
+    color: #f8d877;
+    font-size: 20px;
+    padding-top: 10px;
+    height: 30px;
+    width: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.customer-service {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.customerServ {
+    color: #a2a3a6;
+    font-size: 18px;
+}
+
+.num {
+    font-size: 22px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: #3d464d;
+
+}
+
+.head .category .menu {
+    background-color: #ffd334;
+    padding: 25px 25px;
+}
+
+.head .category .menu label span {
+    margin: 0 15px 0 5px;
+}
+
+.head .category .menu label {
+    position: relative;
+    cursor: pointer;
+}
+
+.head .category .menu label ul {
+    position: absolute;
+    display: none;
+    list-style: none;
+   
+
+}
+
+.head .category .menu label:hover>ul {
+    display: block;
+    top: 220%;
+    min-width: 100%;
+    background-color: #ffd334;
+    width: max-content;
+
+}
+
+.head .category .menu label ul li {
+    padding: 10px;
+}
+
+.head .category .menu label ul li:hover {
+    text-decoration: underline;
+    background-color: #ff7e34;
+}
+
+.head .pages {
+    flex-grow: 1;
+    margin-left: 30px;
+}
+
+.head .pages .pages-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+    height: 100%;
+}
+
+.head .pages .pages-links .shop-det {
+    position: relative;
+}
+
+.head .pages .pages-links .shop-det ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+
+}
+
+.head .pages .pages-links .shop-det ul li {
+    color: white;
+    padding: 10px;
+
+}
+
+.head .pages .pages-links .shop-det ul li:hover {
+    text-decoration: underline;
+    background-color: #465454;
+}
+
+.head .pages .pages-links .shop-det:hover>ul {
+    display: block;
+    top: 220%;
+    min-width: 100%;
+    background-color: #3d464d;
+    width: max-content;
+}
+
+
+
+.head .pages .pages-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.head .pages .pages-links li a:hover {
+    text-decoration: underline;
+    background-color: #465454;
+}
+
+#Home {
+    color: #ffd334;
+}
+
+
+.head .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.head .icons .icon {
+    display: flex;
+    gap: 5px;
+}
+
+.head .icons .icon .icon-num {
+    color: white;
+    border: 1px white solid;
+    border-radius: 50%;
+    width: 1em;
+    line-height: 1em;
+    text-align: center;
+    font-size: 18px;
+}
+
+.head .icons .icon i {
+    font-size: 18px;
+}
+
+.fa-heart,
+.fa-cart-shopping {
+    color: #ffd334;
+    padding-right: 10px;
+}
