@@ -242,6 +242,7 @@ ul li a:hover {
 .head .category .menu {
     background-color: #ffd334;
     padding: 25px 25px;
+    
 }
 
 .head .category .menu label span {
@@ -262,11 +263,13 @@ ul li a:hover {
 }
 
 .head .category .menu label:hover>ul {
+    
     display: block;
     top: 220%;
-    min-width: 100%;
-    background-color: #ffd334;
-    width: max-content;
+    min-width: fit-content;
+    
+    background-color: white;
+    
 
 }
 
@@ -316,10 +319,10 @@ ul li a:hover {
 
 .head .pages .pages-links .shop-det:hover>ul {
     display: block;
-    top: 220%;
+    top: 100%;
     min-width: 100%;
     background-color: #3d464d;
-    width: max-content;
+   
 }
 
 
