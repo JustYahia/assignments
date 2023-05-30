@@ -3,7 +3,7 @@ let taskNumber = 1;
 function add() {
     let input = document.getElementById("task").value;
     if (input !== "") {
-        let table = document.getElementById("mytable");
+        let table = document.getElementById("tbody");
         let row = table.insertRow(-1);
 
         let cell1 = row.insertCell(0);
@@ -26,5 +26,8 @@ function add() {
 
 
         taskNumber++;
+    }
+    else {
+        alert("please enter valid data");
     }
 }
