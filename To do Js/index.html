@@ -12,6 +12,9 @@
    <input type="text" id="task">
    
    <button onclick="add()" id="btn">Add</button>
+   <label for="">Priority</label>
+   <input type="number" id="priority">
+   <button onclick="sortPriority()" id="sort_priority">Sort Priority </button>
    <hr>
     <table id="mytable">
         <thead>
@@ -23,6 +26,7 @@
                 <td>
                     Action
                 </td>
+                <td>Priority</td>
             </tr>
         </thead>
         <tbody id="tbody">
