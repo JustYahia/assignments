@@ -4,7 +4,7 @@ function add() {
     let input = document.getElementById("task").value;
     let priority = document.getElementById("priority").value;
 
-    if (input !== "" && priority > 0 && priority <= 5 && priority !== "") {
+    if (input !== "" && priority > 0 && priority <= 5) {
         let table = document.getElementById("tbody");
         let row = table.insertRow(-1);
 
@@ -105,11 +105,13 @@ function add() {
         });
 
         taskNumber++;
-    } else if (priority <= 0 || priority > 5 || typeof priority === "string") {
-        alert("Enter priority in the range 1 to 5.");
-    } else {
+    }
+    else if (input=="") {
         alert("Please enter valid data.");
     }
+     else if ((priority <= 0 || priority > 5) || typeof priority === "string" || priority !== "") {
+        alert("Enter priority in the range 1 to 5.");
+    } 
 }
 
 function sortPriority() {
