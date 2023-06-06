@@ -52,10 +52,10 @@ function add() {
 
             let saveButton = document.createElement("button");
             saveButton.innerText = "Save";
-
+            saveButton.style.marginLeft = "2px";
             let cancelButton = document.createElement("button");
             cancelButton.innerText = "Cancel";
-
+            cancelButton.style.marginLeft = "2px";
 
             editCell.appendChild(taskInput);
             editCell.appendChild(priorityInput);
@@ -106,12 +106,12 @@ function add() {
 
         taskNumber++;
     }
-    else if (input=="") {
+    else if (input == "") {
         alert("Please enter valid data.");
     }
-     else if ((priority <= 0 || priority > 5) || typeof priority === "string" || priority !== "") {
+    else if ((priority <= 0 || priority > 5) || typeof priority === "string" || priority !== "") {
         alert("Enter priority in the range 1 to 5.");
-    } 
+    }
 }
 
 function sortPriority() {
