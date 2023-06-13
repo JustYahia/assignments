@@ -3,6 +3,7 @@ class TaskManager {
     this.taskNumber = 1;
     this.taskNames = [];
   }
+
   addTask() {
     const input = document.getElementById("task").value;
     const priority = document.getElementById("priority").value;
@@ -58,10 +59,25 @@ class TaskManager {
         this.editTask(row, input, priority, editButton);
       });
 
+      const cell6 = row.insertCell(5);
+
+      const doneButton = document.createElement("button");
+      doneButton.innerText = "Done";
+      cell6.appendChild(doneButton);
+
+      doneButton.addEventListener("click", () => {
+        this.toggleTaskDone(row);
+      });
+
       this.taskNumber++;
     } else if (input === "") {
       alert("Please enter valid data.");
-    } else if (priority <= 0 || priority > 5 || typeof priority === "string" || priority !== "") {
+    } else if (
+      priority <= 0 ||
+      priority > 5 ||
+      typeof priority === "string" ||
+      priority !== ""
+    ) {
       alert("Enter priority in the range 1 to 5.");
     }
   }
@@ -102,7 +118,12 @@ class TaskManager {
       const newTask = taskInput.value;
       const newPriority = priorityInput.value;
 
-      if (newTask !== "" && newPriority > 0 && newPriority <= 5 && newPriority !== "") {
+      if (
+        newTask !== "" &&
+        newPriority > 0 &&
+        newPriority <= 5 &&
+        newPriority !== ""
+      ) {
         row.cells[1].innerText = newTask;
         row.cells[3].innerText = newPriority;
 
@@ -124,8 +145,31 @@ class TaskManager {
     });
   }
 
+  toggleTaskDone(row) {
+    const doneButton = row.cells[5].querySelector("button");
+    const taskNumberCell = row.cells[0];
+    const taskNameCell = row.cells[1];
+    const priorityCell = row.cells[3];
+
+    if (taskNameCell.style.textDecoration === "line-through") {
+      taskNumberCell.style.textDecoration = "none";
+      taskNameCell.style.textDecoration = "none";
+      priorityCell.style.textDecoration = "none";
+      taskNameCell.style.color = "black";
+      priorityCell.style.color = "black";
+      doneButton.style.backgroundColor = "";
+    } else {
+      taskNumberCell.style.textDecoration = "line-through";
+      taskNameCell.style.textDecoration = "line-through";
+      priorityCell.style.textDecoration = "line-through";
+      taskNameCell.style.color = "red";
+      priorityCell.style.color = "red";
+      doneButton.style.backgroundColor = "red";
+    }
+}
+
+
   sortPriority() {
-    
     const table = document.getElementById("tbody");
     const rows = Array.from(table.getElementsByTagName("tr"));
 
@@ -139,10 +183,11 @@ class TaskManager {
       table.appendChild(rows[i]);
     }
   }
-  
 
   deleteChecked() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+    const checkboxes = document.querySelectorAll(
+      'input[type="checkbox"]:checked'
+    );
     checkboxes.forEach((checkbox) => {
       const currentRow = checkbox.parentNode.parentNode;
       const taskName = currentRow.cells[1].innerText;
@@ -154,6 +199,7 @@ class TaskManager {
     });
   }
 }
+
 const taskManager = new TaskManager();
 
 function add(event) {
@@ -169,6 +215,9 @@ function deleteChecked() {
   taskManager.deleteChecked();
 }
 
+
 document.getElementById("btn").addEventListener("click", add);
 document.getElementById("sort_priority").addEventListener("click", sortPriority);
-document.getElementById("delete_checked").addEventListener("click", deleteChecked);
+document
+  .getElementById("delete_checked")
+  .addEventListener("click", deleteChecked);
