@@ -1,0 +1,32 @@
+{
+  "name": "Fluffyy",
+  "activities": [
+    "play",
+    "eat cat food"
+  ],
+  "catFriends": [
+    {
+      "name": "bar",
+      "activities": [
+        "be grumpy",
+        "eat bread omblet",
+        "play with yarn",
+        "nap in the sun"
+      ],
+      "weight": 8,
+      "furcolor": "gray"
+    },
+    {
+      "name": "foo",
+      "activities": [
+        "sleep",
+        "pre-sleep naps",
+        "hunt mice",
+        "climb trees"
+      ],
+      "weight": 3
+    }
+  ],
+  "height": 10,
+  "weight": 5
+}
