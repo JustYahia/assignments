@@ -1,0 +1,79 @@
+form.login {
+    width: 40%;
+    margin: 5em auto 0;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgb(232, 134, 54);
+    position: absolute;
+    left: 49%;
+    top: 6%;
+    align-items: center;
+    justify-content: center;
+}
+
+.login fieldset {
+    border-radius: 0.3em;
+    padding: 0.8em;
+    background-color: #ffffff;
+}
+
+.login h2 {
+    padding-top: 0;
+    border-bottom: none;
+}
+
+.login p {
+    padding-bottom: 0;
+    padding-top: 1.5rem;
+}
+
+.login input {
+    flex: 0 1 100%;
+    border: 1px solid;
+    padding: 0.3em;
+    border-left: 1rem solid rgb(232, 134, 54);
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+}
+
+.login button {
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.6em 1.2em;
+    margin-top: 1.5rem;
+    width: 60%;
+    outline: none;
+    background-color: rgb(232, 134, 54);
+}
+
+.login i {
+    border-right: none;
+    border-bottom-left-radius: 0.3em;
+    background-color: #e9ecef;
+}
+
+.login a {
+    color: rgb(232, 134, 54);
+}
+
+.login a:hover {
+    cursor: pointer;
+}
+
+.login .field {
+    display: flex;
+    padding-bottom: 0;
+}
+
+p.error {
+    text-align: left;
+    border-radius: 0.3em;
+    color: red;
+    padding-top: 0;
+}
+
+.input-error {
+    border-left-color: red;
+}

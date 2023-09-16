@@ -1,0 +1,32 @@
+<h3>My Cart</h3>
+<div class="container">
+    <div id="cart-item" class="column" *ngFor="let item of items">
+        <div>
+            <img src={{item.picImage}} alt="picture" class="image">
+        </div>
+        <div class="pic-text">
+            <div class="pic-name">
+                <span>{{ item.picName }}</span>
+            </div>
+            <div class="pic-price">
+                <span>{{ item.picPrice }}</span>
+            </div>
+        </div>
+    </div>
+
+    <form [formGroup]="checkoutForm" class="column" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="Your Name">
+                Your Name:
+            </label>
+            <input id="name" type="text" formControlName="name">
+        </div>
+        <div>
+            <label for="address">
+                Address:
+            </label>
+            <input id="address" type="text" formControlName="address">
+        </div>
+        <button class="btn" type="submit">Purchase</button>
+    </form>
+</div>

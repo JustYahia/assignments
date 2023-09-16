@@ -1,0 +1,45 @@
+.mini-navbar-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    margin-top: 0px;   
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(18, 17, 17);
+    cursor: pointer;
+    margin-left: 3px;   
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(2, 2, 2);
+    text-decoration-thickness: 2px;
+}
+
+nav {
+    border-top: 25px solid white;
+    font-family: serif;
+    text-decoration: underline;
+    text-decoration-color: rgb(67, 65, 65);
+    text-underline-offset: 7px; 
+    width: 30em;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+nav li {
+    list-style: none;
+    margin: .35em;
+    padding: 0 2.75em;    
+}

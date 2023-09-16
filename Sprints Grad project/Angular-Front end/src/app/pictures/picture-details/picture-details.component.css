@@ -1,0 +1,195 @@
+.container {
+    margin-left: 1100px;
+    margin-top: 5px;
+
+}
+
+img {
+    width: 220%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    width: 310px;
+    object-fit: cover;
+    float: right;
+    margin-right: 750px;
+}
+
+.column-grid>img {
+    width: 100%;
+    height: 100%;
+}
+
+.pic-text {
+    margin-left: 100px;
+    margin-top: 10px;
+    width: 450px;
+    position: absolute
+}
+
+.picture-price p {
+    line-height: 1.2;
+    font-size: 19px;
+    font-weight: 800;
+    color: black;
+}
+
+.container button {
+    color: white;
+    border: none;
+    border-radius: 0.2em;
+    padding: 0.7em 0.5em 1.0em;
+    outline: none;
+    /* margin-top: 15px; */
+    background-color: rgb(232, 134, 54);
+    width: 100px;
+    font-family: serif;
+    margin-inline: 0% 2%;
+    writing-mode: horizontal-tb;
+    direction: rtl;
+    margin-top: 290px;
+    margin-right: 60px;
+    margin-left: -50px;
+    display: inline-block;
+}
+
+.all-btn {
+    display: inline-block;
+}
+
+.btn-logged {
+    margin-top: -250px;
+}
+
+.container button:hover {
+    box-shadow: 0 0 30px 0 #f17f04 inset, 0 0 25px 4px #f78204;
+    border: 1px solid #8d8c88;
+}
+
+.btn:hover {
+    box-shadow: 0 0 30px 0 #f17f04 inset, 0 0 25px 4px #f78204;
+    border: 1px solid #8d8c88;
+}
+
+form.create {
+    width: 100%;
+    max-width: 1200px;
+    height: 38.4em;
+    margin: 5em auto 5rem;
+    /* margin: 3em auto 0; */
+    padding: .5em;
+    border: .3em solid rgb(232, 134, 54);
+    border-radius: .5rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #444;
+    background-color: hsla(0, 0%, 94.1%, .8);
+    box-shadow: 0 0 1em 0 #000;
+    text-align: center;
+    float: right;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-top: 10px;
+}
+
+.create .field {
+    display: inline-block;
+    padding-bottom: 0;
+}
+
+.create input {
+    flex: 0 1 100%;
+    border: 1px solid;
+    padding: .3em;
+    border-left: 1rem solid rgb(232, 134, 54);
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+    width: 25em;
+    white-space: 20em;
+}
+
+#picName {
+    width: 58em;
+}
+
+#picMaterials {
+    width: 58em;
+}
+
+#picPrice {
+    width: 18em;
+}
+
+#picImage {
+    width: 28em;
+}
+
+textarea {
+    width: 58em;
+    height: 6em;
+}
+
+.create select {
+    border-color: rgb(10, 10, 10);
+    width: 12em;
+    height: 2.3em;
+    border-left: 1rem solid rgb(232, 134, 54);
+    border-top-right-radius: 0.3em;
+    border-bottom-right-radius: 0.3em;
+}
+
+.create fieldset {
+    border-radius: 0.3em;
+    padding: 1.8em;
+    background-color: #ffffff;
+    /* padding-bottom: 0; */
+}
+
+.create h2 {
+    padding-top: 0;
+    border-bottom: none;
+}
+
+.create p {
+    padding-bottom: 0;
+    padding-top: 1.5rem;
+}
+
+.create button {
+    color: white;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.6em 1.2em;
+    margin-top: 1.5rem;
+    width: 60%;
+    outline: none;
+    font-family: serif;
+    background-color: rgb(232, 134, 54);
+}
+
+.create button:hover {
+    box-shadow: 0 0 30px 0 #f17f04 inset, 0 0 25px 4px #f78204;
+    border: 1px solid #8d8c88;
+
+}
+
+.create i {
+    border-right: none;
+    border-bottom-left-radius: 0.3em;
+    background-color: #e9ecef;
+}
+
+p.error {
+    text-align: left;
+    border-radius: 0.3em;
+    color: red;
+    padding-top: 0;
+    white-space: 0;
+}
+
+.input-error {
+    border-left-color: red;
+}

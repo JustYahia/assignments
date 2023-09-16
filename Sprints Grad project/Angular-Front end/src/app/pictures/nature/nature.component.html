@@ -1,0 +1,17 @@
+<h2 class="title">Nature pictures</h2>
+<div *ngIf="isLoading">
+    <app-loader />
+</div>
+<div class="row" *ngIf="!isLoading">
+    <div class="items" *ngFor="let pic of picturesList, let i = index">
+        <a [routerLink]="['/picture/nature', pic.picId]">
+            <img src={{pic.picImage}} alt="picture" class="picture">
+            <div class="picture-name">
+                <p>{{pic.picName}}</p>
+            </div>
+            <div class="picture-price">
+                <p>{{pic.picPrice}}</p>
+            </div>
+        </a>
+    </div>
+</div>

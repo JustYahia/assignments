@@ -1,0 +1,171 @@
+<app-your-account />
+<div *ngIf="isLoading">
+    <app-loader />
+</div>
+<div class="container">
+    <div class="profile">
+        <h3>Edit my Profile:</h3>
+        <h2>Be Gallery</h2>
+        <div>
+            <h1>Be Gallery</h1>
+            <h1>Be Gallery</h1>
+            <h1>Be Gallery</h1>
+        </div>
+        <ng-container>
+            <div class="field" *ngIf="!isLoading">
+                <!-- <a [routerLink]="['/auth/profile/account/edit',]"></a> -->
+                <form [formGroup]="form" (ngSubmit)="saveAccount()">
+                    <!-- username -->
+                    <div class="field">
+                        <p>Username:</p>
+                        <input type="text" id="username" formControlName="username">
+                    </div>
+                    <!-- username validation -->
+                    <ng-container *ngIf="form.get('username')?.touched">
+                        <p *ngIf="form.get('username')?.errors?.['required']" class="error">
+                            Username is required!
+                        </p>
+                        <p *ngIf="form.get('username')?.errors?.['minlength']" class="error">
+                            Username shold be londer than 5 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- firstname -->
+                    <div class="field">
+                        <p>Firstname:</p>
+                        <input type="text" id="firstname" formControlName="firstname">
+                    </div>
+                    <!-- firstname validation -->
+                    <ng-container *ngIf="form.get('firstname')?.touched">
+                        <p *ngIf="form.get('firstname')?.errors?.['required']" class="error">
+                            Firstname is required!
+                        </p>
+                        <p *ngIf="form.get('firstname')?.errors?.['minlength']" class="error">
+                            Firstname shold be londer than 2 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- Secondname -->
+                    <div class="field">
+                        <p>Secondname:</p>
+                        <input type="text" id="secondname" formControlName="secondname">
+                    </div>
+                    <!-- secondname validation -->
+                    <ng-container *ngIf="form.get('secondname')?.touched">
+                        <p *ngIf="form.get('secondname')?.errors?.['required']" class="error">
+                            Secondname is required!
+                        </p>
+                        <p *ngIf="form.get('secondname')?.errors?.['minlength']" class="error">
+                            Secondname shold be londer than 2 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- Lastname -->
+                    <div class="field">
+                        <p>Lastname:</p>
+                        <input type="text" id="lastname" formControlName="lastname">
+                    </div>
+                    <!-- lastname validation -->
+                    <ng-container *ngIf="form.get('lastname')?.touched">
+                        <p *ngIf="form.get('lastname')?.errors?.['required']" class="error">
+                            Lastname is required!
+                        </p>
+                        <p *ngIf="form.get('lastname')?.errors?.['minlength']" class="error">
+                            Lastname shold be londer than 2 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- Email -->
+                    <div class="field">
+                        <p>Email: </p>
+                        <input type="text" id="email" formControlName="email">
+                    </div>
+                    <!-- email validation -->
+                    <ng-container *ngIf="form.get('email')?.touched">
+                        <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+                            Email is required!
+                        </p>
+                    </ng-container>
+
+                    <!-- Phone -->
+                    <div class="field">
+                        <p>Phone: </p>
+                        <input type="text" id="phone" formControlName="phone" placeholder="885 888 888">
+                    </div>
+                    <!-- phone validation -->
+                    <ng-container *ngIf="form.get('phone')?.touched">
+                        <p *ngIf="form.get('phone')?.errors?.['required']" class="error">
+                            Phone is required!
+                        </p>
+                        <p *ngIf="form.get('phone')?.errors?.['minlength']" class="error">
+                            Phone shold be londer than 9 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- country -->
+                    <div class="field">
+                        <p>Country:</p>
+                        <input type="text" id="country" formControlName="country">
+                    </div>
+                    <!-- country validation -->
+                    <ng-container *ngIf="form.get('country')?.touched">
+                        <p *ngIf="form.get('country')?.errors?.['required']" class="error">
+                            Country is required!
+                        </p>
+                        <p *ngIf="form.get('country')?.errors?.['minlength']" class="error">
+                            Country shold be londer than 2 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- place -->
+                    <div class="field">
+                        <p>Place:</p>
+                        <input type="text" id="place" formControlName="place">
+                    </div>
+                    <!-- place validation -->
+                    <ng-container *ngIf="form.get('place')?.touched">
+                        <p *ngIf="form.get('place')?.errors?.['required']" class="error">
+                            Place is required!
+                        </p>
+                        <p *ngIf="form.get('place')?.errors?.['minlength']" class="error">
+                            Place shold be londer than 2 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- postcode -->
+                    <div class="field">
+                        <p>Postcode:</p>
+                        <input type="text" id="postcode" formControlName="postcode">
+                    </div>
+                    <!-- postcode validation -->
+                    <ng-container *ngIf="form.get('postcode')?.touched">
+                        <p *ngIf="form.get('postcode')?.errors?.['required']" class="error">
+                            Postcode is required!
+                        </p>
+                        <p *ngIf="form.get('postcode')?.errors?.['minlength']" class="error">
+                            Postcode shold be londer than 2 characters!
+                        </p>
+                    </ng-container>
+
+                    <!-- street -->
+                    <div class="field">
+                        <p>Street:</p>
+                        <input type="text" id="street" formControlName="street">
+                    </div>
+                    <!-- street validation -->
+                    <ng-container *ngIf="form.get('street')?.touched">
+                        <p *ngIf="form.get('street')?.errors?.['required']" class="error">
+                            Street is required!
+                        </p>
+                        <p *ngIf="form.get('street')?.errors?.['minlength']" class="error">
+                            Street shold be londer than 3 characters!
+                        </p>
+                    </ng-container>
+
+                    <button class="cancel-button" (click)="closeAccountForm()">Cancel</button>
+                    <button class="save-button">Save</button>
+                </form>
+            </div>
+        </ng-container>
+    </div>
+</div>

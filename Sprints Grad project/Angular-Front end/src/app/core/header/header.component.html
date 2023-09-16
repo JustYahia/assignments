@@ -1,0 +1,66 @@
+<header>
+    <div class="mini-navbar-wrap">
+        <div class="logo-wrap">
+            <p class="logo"><ng-container class="logo"><a class="logo" routerLink="/">Be Gallery</a></ng-container></p>
+        </div>
+        <form>
+            <div class="search-line">
+                <input type="search" id="mySearch" name="search" placeholder="Search for anything" />
+                <button type="button">Search</button>
+            </div>
+        </form>
+        <div class="mini-navbar">
+            <ul *ngIf="!isLoggedIn">
+                <li>
+                    <a routerLink="/auth/login">Login</a>
+                </li>
+                <li>
+                    <a routerLink="/auth/register">Register</a>
+                </li>
+            </ul>
+            <ul *ngIf="isLoggedIn">
+                <li>
+                    <a routerLink="/auth/profile">{{ user?.username }}</a>
+                </li>
+                <li (click)="logout()">
+                    <a>Logout</a>
+                </li>
+                <li>
+                    <a routerLink="/auth/basket">My cart({{itemsCountInCart()}})</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/picture/abstract">Abstract</a>
+            </li>
+            <li>
+                <a routerLink="/picture/animals">Animals</a>
+            </li>
+            <li>
+                <a routerLink="/picture/auto">Auto</a>
+            </li>
+            <li>
+                <a routerLink="/picture/childrens">Children's</a>
+            </li>
+            <li>
+                <a routerLink="/picture/flowers">Flowers</a>
+            </li>
+            <li>
+                <a routerLink="/picture/foodAndDrinks">Food & Drinks</a>
+            </li>
+            <li>
+                <a routerLink="/picture/nature">Nature</a>
+            </li>
+            <li>
+                <a routerLink="/picture/portraites">Portraites</a>
+            </li>
+            <li>
+                <a routerLink="/picture/reproductions">Reproductions    </a>
+            </li>
+        </ul>
+    </nav>
+
+</header>

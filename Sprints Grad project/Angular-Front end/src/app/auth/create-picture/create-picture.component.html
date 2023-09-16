@@ -1,0 +1,102 @@
+<app-your-account />
+
+    <form class="create" #form="ngForm" (ngSubmit)="createPictureHandler(form)">
+        <fieldset>
+            <h2>Create Picture Form</h2>
+
+            <!-- name -->
+            <p class="field field-icon">
+                <label for="picName"><span><i class="field-user"></i></span></label>
+                <input class="input-error" type="text" name="picName" #nameInput="ngModel" ngModel required
+                    minlength="2" id="picName" placeholder="Name of picture or short introduction*">
+            </p>
+            <ng-container *ngIf="nameInput.touched">
+                <p class="error" *ngIf="nameInput.errors?.['required']">
+                    Picture name is required.
+                </p>
+                <p class="error" *ngIf="nameInput.errors?.['minlength']">
+                    Picture name must be at least {{nameInput.errors?.['minlength']['requiredLength']}} characters
+                    long.
+                </p>
+            </ng-container>
+
+            <!-- materials -->
+            <p class="field field-icon">
+                <label for="picMaterials"><span><i class="field-user"></i></span></label>
+                <input class="input-error" type="text" name="picMaterials" #materialsInput="ngModel" ngModel required
+                    minlength="8" id="picMaterials" placeholder="Materials*">
+            </p>
+            <ng-container *ngIf="materialsInput.touched">
+                <p class="error" *ngIf="materialsInput.errors?.['required']">
+                    Materials is required.
+                </p>
+                <p class="error" *ngIf="materialsInput.errors?.['minlength']">
+                    Materials must be at least {{materialsInput.errors?.['minlength']['requiredLength']}} characters
+                    long.
+                </p>
+            </ng-container>
+
+            <!-- category -->
+            <p class="field field-icon">
+                <label for="picCategory"><span><i class="field-user"></i></span></label>
+                <select name="picCategory" id="picCategory" class="category" #categorySelect="ngModel" ngModel>
+                    <option value="" disabled selected hidden>Choose a category*</option>
+                    <option value="abstract">Abstract</option>
+                    <option value="animals">Animals</option>
+                    <option value="auto">Auto</option>
+                    <option value="childrens">Children's</option>
+                    <option value="flowers">Flowers</option>
+                    <option value="foodAndDrinks">Food & Drinks</option>
+                    <option value="nature">Nature</option>
+                    <option value="portraites">Portraites</option>
+                    <option value="reproductions">Reproductions</option>
+                </select>
+            </p>
+
+            <!-- image -->
+            <p class="field field-icon">
+                <label for="picImage"><span><i class="field-user"></i></span></label>
+                <input class="input-error" type="text" name="picImage" #imageInput="ngModel" ngModel required
+                    minlength="1" id="picImage" placeholder="Image*">
+            </p>
+            <ng-container *ngIf="imageInput.touched">
+                <p class="error" *ngIf="imageInput.errors?.['required']">
+                    Image is required.
+                </p>
+            </ng-container>
+
+            <!-- price -->
+            <p class="field field-icon">
+                <label for="picPrice"><span><i class="field-user"></i></span></label>
+                <input class="input-error" type="text" name="picPrice" #priceInput="ngModel" ngModel required
+                    minlength="1" id="picPrice" placeholder="Price*">
+            </p>
+            <ng-container *ngIf="priceInput.touched">
+                <p class="error" *ngIf="priceInput.errors?.['required']">
+                    Price is required.
+                </p>
+                <p class="error" *ngIf="priceInput.errors?.['minlength']">
+                    Price must be at least {{priceInput.errors?.['minlength']['requiredLength']}} characters
+                    long.
+                </p>
+            </ng-container>
+
+            <!-- description -->
+            <p class="field field-icon">
+                <label for="picDescription"><span><i class="field-user"></i></span></label>
+                <textarea type="text" ngModel required #descriptionInput="ngModel" minlength="10" name="picDescription"
+                    id="picDescription" rows="8" class="height" placeholder="Description*"></textarea>
+            </p>
+            <ng-container *ngIf="priceInput.touched">
+                <p class="error" *ngIf="descriptionInput.errors?.['required']">
+                    The field with your description is required.
+                </p>
+                <p class="error" *ngIf="descriptionInput.errors?.['minlength']">
+                    Description must be at least {{descriptionInput.errors?.['minlength']['requiredLength']}} characters
+                    long.
+                </p>
+            </ng-container>
+            <button class="cancel" (click)="closeCreateForm()">Cancel</button>
+            <button class="public" [disabled]="form.invalid">Create</button>
+        </fieldset>
+    </form>

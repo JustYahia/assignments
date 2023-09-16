@@ -1,0 +1,39 @@
+<form #form="ngForm" class="login" (ngSubmit)="login(form)">
+    <fieldset>
+        <h2>Login Form</h2>
+
+        <p class="field field-icon">
+            <label for="username"><span><i class="fas fa-envelope"></i></span></label>
+            <input #usernameInput="ngModel" class="input-error" ngModel required type="username"
+                name="username" id="username" placeholder="username" [minlength]="5">
+        </p>
+        <ng-container *ngIf="usernameInput.touched">
+            <p class="error" *ngIf="usernameInput.errors?.['required']">
+                Username is required!
+            </p>
+            <p class="error" *ngIf="usernameInput.errors?.['minlength']">
+                Username must be at least 5 characters!
+            </p>
+        </ng-container>
+
+        <p class="field field-icon">
+            <label for="password"><span><i class="fas fa-lock"></i></span></label>
+            <input type="password" ngModel #passwordInput="ngModel" name="password" id="password" placeholder="password" required [minlength]="8">
+        </p>
+        <ng-container *ngIf="passwordInput.touched">
+            <p class="error" *ngIf="passwordInput.errors?.['required']">
+                Password is required!
+            </p>
+            <p class="error" *ngIf="passwordInput.errors?.['minlength']">
+                Password must be at least 8 characters!
+            </p>
+        </ng-container>
+
+        <button [disabled]="form.invalid">Login</button>
+
+        <p class="text-center">
+            Don't have an account yet?
+            <a routerLink="/auth/register">Register</a>
+        </p>
+    </fieldset>
+</form>

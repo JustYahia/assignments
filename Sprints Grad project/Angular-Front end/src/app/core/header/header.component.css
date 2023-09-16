@@ -1,0 +1,122 @@
+header {
+    background: white;
+    width: 1900px;
+}
+
+.logo {
+    font-style: normal;
+    font-size: 1.3em;
+    color: rgba(246, 102, 12, 0.942);
+    padding-bottom: 0;
+    text-decoration-line: none;
+}
+
+.logo-wrap {
+    font-family: Georgia, serif;;
+    margin: 0.5em 0;
+}
+
+header ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+header ul span {
+    color: white;
+    padding: 0.5em;
+}
+
+header li {
+    list-style: none;
+    margin: .35em;
+    padding: 0 .95em;    
+}
+
+.mini-navbar a {
+    text-decoration: none;
+    color: rgb(18, 17, 17);
+    cursor: pointer;
+    margin-left: 1px;       
+}
+
+/* .mini-navbar {
+    margin-left: 235px;
+} */
+
+nav a {
+    text-decoration: none;
+    color: rgb(18, 17, 17);
+    cursor: pointer;
+    margin-left: 1px;   
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: rgb(2, 2, 2);
+    text-decoration-thickness: 2px;
+}
+
+nav {
+    border-top: 1px solid white;
+    font-family: serif;
+    text-decoration: underline;
+    text-decoration-color: rgb(67, 65, 65);
+    text-underline-offset: 7px; 
+}
+
+.mini-navbar-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+.mini-navbar ul {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.mini-navbar ul li+li {
+    border-left: 1px solid lightgrey;
+    padding-left: .5em;
+}
+
+.mini-navbar ul {
+    border: 2px solid black;
+    border-radius: 0.3em;
+    padding-left: 0;
+    width: 100%;
+    margin: 10px 5px;
+}
+
+button {
+    background-color: rgb(243, 247, 247);
+    border: 2px solid black;
+    color: black;
+    opacity: 0.6;
+    max-width: 100px;
+    height: 43px;
+    text-align: right;
+}
+
+input::placeholder {
+    opacity: 0.5;
+    color: rgb(62, 59, 59);
+    font-size: 15px;
+}
+
+#mySearch {
+    padding: 6px 450px;
+    text-align: center;
+    background-color: rgb(243, 247, 247);
+    width: 300px;
+}
+
+.search-line {
+    margin: 0px 0px;   
+}

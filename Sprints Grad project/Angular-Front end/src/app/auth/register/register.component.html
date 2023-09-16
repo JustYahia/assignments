@@ -1,0 +1,187 @@
+<form [formGroup]="form" class="register" (ngSubmit)="registerHandler()">
+
+    <fieldset>
+        <h2>Registration Form</h2>
+
+        <!-- username -->
+        <p class="field field-icon">
+            <label for="username"><span><i class="field-user"></i></span></label>
+            <input class="input-error" type="text" formControlName="username" name="username" id="username"
+                placeholder="Username">
+        </p>
+        <ng-container *ngIf="form.get('username')?.touched">
+            <p *ngIf="form.get('username')?.errors?.['required']" class="error">
+                Username is required!
+            </p>
+            <p *ngIf="form.get('username')?.errors?.['minlength']" class="error">
+                Username shold be londer than 5 characters!
+            </p>
+        </ng-container>
+
+        <!-- firstname -->
+        <p class="field field-icon">
+            <label for="firstname"><span><i class="field-user"></i></span></label>
+            <input class="input-error" type="text" formControlName="firstname" name="firstname" id="firstname"
+                placeholder="First name">
+        </p>
+        <ng-container *ngIf="form.get('firstname')?.touched">
+            <p *ngIf="form.get('firstname')?.errors?.['required']" class="error">
+                First name is required!
+            </p>
+            <p *ngIf="form.get('firstname')?.errors?.['minlength']" class="error">
+                First name shold be londer than 2 characters!
+            </p>
+        </ng-container>
+
+        <!-- secondname -->
+        <p class="field field-icon">
+            <label for="secondname"><span><i class="field-user"></i></span></label>
+            <input class="input-error" formControlName="secondname" type="text" name="secondname" id="secondname"
+                placeholder="Second name">
+        </p>
+        <ng-container *ngIf="form.get('secondname')?.touched">
+            <p *ngIf="form.get('secondname')?.errors?.['required']" class="error">
+                Second name is required!
+            </p>
+            <p *ngIf="form.get('secondname')?.errors?.['minlength']" class="error">
+                Second name shold be londer than 2 characters!
+            </p>
+        </ng-container>
+
+        <!-- lastname -->
+        <p class="field field-icon">
+            <label for="lastname"><span><i class="field-user"></i></span></label>
+            <input class="input-error" formControlName="lastname" type="text" name="lastname" id="lastname"
+                placeholder="Last name">
+        </p>
+        <ng-container *ngIf="form.get('lastname')?.touched">
+            <p *ngIf="form.get('lastname')?.errors?.['required']" class="error">
+                Last name is required!
+            </p>
+            <p *ngIf="form.get('lastname')?.errors?.['minlength']" class="error">
+                Last name shold be londer than 2 characters!
+            </p>
+        </ng-container>
+
+        <!-- email -->
+        <p class="field field-icon">
+            <label for="email"><span><i class="field-envelope"></i></span></label>
+            <input type="email" formControlName="email" name="email" id="email"
+             placeholder="Email" email>
+        </p>
+        <ng-container *ngIf="form.get('email')?.touched">
+            <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+                Email is required!
+            </p>
+            <p class="error" *ngIf="form.get('email')?.errors?.['pattern']">
+                Please provide a valid email address
+            </p>
+        </ng-container>
+
+        <!-- phone number -->
+        <p class="field field-icon">
+            <label for="phone"><span><i class="field-phone"></i></span></label>
+            <input type="text" formControlName="phone" name="phone" id="phone" placeholder="Phone: +359885889988">
+        </p>
+        <ng-container *ngIf="form.get('phone')?.touched">
+            <p *ngIf="form.get('phone')?.errors?.['required']" class="error">
+                Phone is required!
+            </p>
+            <p *ngIf="form.get('phone')?.errors?.['minlength']" class="error">
+                Phone shold be londer than 9 characters!
+            </p>
+        </ng-container>
+
+        <!-- country -->
+        <p class="field field-icon">
+            <label for="country"><span><i class="field-address"></i></span></label>
+            <input class="input-error" type="text" formControlName="country" name="country" id="country"
+                placeholder="Country">
+        </p>
+        <ng-container *ngIf="form.get('address')?.get('country')?.touched">
+            <p *ngIf="form.get('address')?.get('country')?.errors?.['required']" class="error">
+                Country is required!
+            </p>
+            <p *ngIf="form.get('address')?.get('country')?.errors?.['minlength']" class="error">
+                Country shold be londer than 2 characters!
+            </p>
+        </ng-container>
+
+        <!-- place -->
+        <p class="field field-icon">
+            <label for="place"><span><i class="field-address"></i></span></label>
+            <input class="input-error" formControlName="place" type="text" name="place" id="place"
+                placeholder="Place: city/village/other">
+        </p>
+        <ng-container *ngIf="form.get('address')?.get('place')?.touched">
+            <p *ngIf="form.get('address')?.get('place')?.errors?.['required']" class="error">
+                Place is required!
+            </p>
+            <p *ngIf="form.get('address')?.get('place')?.errors?.['minlength']" class="error">
+                Place shold be londer than 2 characters!
+            </p>
+        </ng-container>
+
+        <!-- postcode -->
+        <p class="field field-icon">
+            <label for="postcode"><span><i class="field-address"></i></span></label>
+            <input class="input-error" formControlName="postcode" type="text" name="postcode" id="postcode"
+                placeholder="Postcode">
+        </p>
+        <ng-container *ngIf="form.get('address')?.get('postcode')?.touched">
+            <p *ngIf="form.get('address')?.get('postcode')?.errors?.['required']" class="error">
+                Postcode is required!
+            </p>
+            <p *ngIf="form.get('address')?.get('postcode')?.errors?.['minlength']" class="error">
+                Postcode shold be londer than 2 characters!
+            </p>
+        </ng-container>
+
+        <!-- street address -->
+        <p class="field field-icon">
+            <label for="street address"><span><i class="field-address"></i></span></label>
+            <input class="input-error" formControlName="street" type="text" name="street" id="street"
+                placeholder="Street address">
+        </p>
+        <ng-container *ngIf="form.get('address')?.get('street')?.touched">
+            <p *ngIf="form.get('address')?.get('street')?.errors?.['required']" class="error">
+                Street address is required!
+            </p>
+            <p *ngIf="form.get('address')?.get('street')?.errors?.['minlength']" class="error">
+                Street address shold be londer than 3 characters!
+            </p>
+        </ng-container>
+
+        <!-- password -->
+        <ng-container formGroupName="pass">
+            <p class="field field-icon">
+                <label for="password"><span><i class="field-lock"></i></span></label>
+                <input type="password" formControlName="password" name="password" id="password" placeholder="Password">
+            </p>
+            <ng-container *ngIf="form.get('pass')?.get('password')?.touched">
+                <p class="error" *ngIf="form.get('pass')?.get('password')?.errors?.['required']">
+                    Password is required!
+                </p>
+                <p class="error" *ngIf="form.get('pass')?.get('password')?.errors?.['minlength']">
+                    Password must be at least 5 characters!
+                </p>
+            </ng-container>
+
+            <!-- rePassword -->
+            <p class="field field-icon">
+                <label for="rePassword"><span><i class="field-lock"></i></span></label>
+                <input type="password" formControlName="rePassword" name="rePassword" id="rePassword"
+                    placeholder="Re-enter password">
+            </p>
+            <p *ngIf="form.get('pass')?.errors?.['sameValueGroupValidator'] && form.get('pass')?.get('rePassword')?.touched"
+                class="error">Repeat Password does not match password!</p>
+        </ng-container>
+        
+        <button [disabled]="form.invalid">Submit</button>
+
+        <p class="text-center">
+            If you have already registered!
+            <a routerLink="/auth/login">Log In</a>
+        </p>
+    </fieldset>
+</form>
